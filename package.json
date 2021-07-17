@@ -4,6 +4,7 @@
   "description": "My Heroku Chat App That Is Going To Low Orbit",
   "main": "socket.js",
   "scripts": {
+    "start": "node socket.js",
     "test": "node socket.js"
   },
   "repository": {
