@@ -16,7 +16,7 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3000, "192.168.0.7", () => {
+server.listen(3000, "0.0.0.0", () => {
   console.log('listening on *:3000');
 });
 
