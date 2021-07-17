@@ -1,0 +1,19 @@
+{
+  "name": "socketrocket",
+  "version": "1.0.0",
+  "description": "My Heroku Chat App That Is Going To Low Orbit",
+  "main": "socket.js",
+  "scripts": {
+    "test": "node socket.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolopTechnology/socketrocket.git"
+  },
+  "author": "sergio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PolopTechnology/socketrocket/issues"
+  },
+  "homepage": "https://github.com/PolopTechnology/socketrocket#readme"
+}
