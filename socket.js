@@ -6,7 +6,6 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 const PouchDB = require('pouchdb');
 const db = new PouchDB('socketdb');
-let areYouConnected = false;
 let numberOfMessages = 0;
 let n = numberOfMessages;
 
@@ -18,7 +17,6 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
   console.log('a user connected');
   //getfromdb
-  if(areYouConnected === false) {
     db.get('101', function(err,docu){
       if(err) {
         console.log('Diego dice que tienes un error. Arreglalo AHORA!');
@@ -43,8 +41,6 @@ io.on('connection', (socket) => {
         console.log(docu);
       }
     })
-    areYouConnected = true;
-  }
   //getfromdb
   socket.on('disconnect', () => {
     console.log('user disconnected');
