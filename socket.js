@@ -9,10 +9,6 @@ const db = new PouchDB('socketdb');
 let numberOfMessages = 0;
 let n = numberOfMessages;
 
-doc = {
-  _id: '101'
-}
-
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
