@@ -9,6 +9,18 @@ const db = new PouchDB('socketdb');
 let numberOfMessages = 0;
 let n = numberOfMessages;
 
+doc = {
+  _id: '101'
+}
+
+db.put(doc, function(err, res){
+  if(err){
+    console.log(err)
+  } else {
+    console.log('msg sent');
+  }
+})
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
