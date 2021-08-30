@@ -25,6 +25,9 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="//cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.min.js"></script>
     <script>
+          var person = prompt("Username?");
+    </script>
+    <script>
       var socket = io();
 
       var form = document.getElementById('form');
@@ -33,7 +36,7 @@
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         if (input.value) {
-           socket.emit('chat message', input.value);
+           socket.emit('chat message', person + " : " + input.value);
            input.value = '';
         }
       });
