@@ -27,7 +27,7 @@
     <script>
           var person = prompt("Username?");
           var topic = prompt("Topic!");
-          var topicKey = ";" + topic + ";";
+          var topicKey = ";" + topic.toLowerCase() + ";";
     </script>
     <script>
       var socket = io();
@@ -38,9 +38,9 @@
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         if(topic != null){
-          socket.emit('chat message', person + " : " + topicKey + " " + input.value);
+          socket.emit('chat message', person + " : " + topicKey.toLowerCase() + " " + input.value);
         } else if (topic == null) {
-          socket.emit('chat message', person + " : " + input.value);
+          socket.emit('chat message', person + " : " + input.value);  
         }
         input.value = '';
       });
